@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 
-export const IndexPageTemplate = ({ image, title, subheading }) => {
+export const IndexPageTemplate = ({ image, title, subheading, services }) => {
   return (
     <>
       <section
@@ -32,11 +32,11 @@ export const IndexPageTemplate = ({ image, title, subheading }) => {
       <section className="landing-services">
         {/* <h2>{services.heading}</h2> */}
         <div className="service-wrapper">
-          {/* {services.servicecard.map((card, i) => {
+          {services.service_card.map((card, i) => {
             return (
               <ImageCard image={card.image} text={card.text} card_title={card.card_title} key={i} />
             );
-          })} */}
+          })}
         </div>
       </section>
     </>
@@ -61,6 +61,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
+        services={frontmatter.services}
       />
     </Layout>
   );
@@ -89,38 +90,20 @@ export const pageQuery = graphql`
           }
         }
         subheading
+        services {
+          heading
+          service_card {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
+        }
       }
     }
   }
 `;
-
-// export const pageQuery = graphql`
-//   query MyQuery {
-//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-//       frontmatter {
-//         title
-//         image {
-//           childImageSharp {
-//             fluid(maxWidth: 2048, quality: 100) {
-//               ...GatsbyImageSharpFluid
-//             }
-//           }
-//         }
-//         subheading
-//         services {
-//           heading
-//           servicecard {
-//             image {
-//               childImageSharp {
-//                 fluid(maxWidth: 240, quality: 64) {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//             text
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
