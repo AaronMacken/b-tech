@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({ image, title, subheading, services }) => {
         </div>
       </section>
       <section className="landing-services">
-        {/* <h2>{services.heading}</h2> */}
+        <h2>{services.heading}</h2>
         <div className="service-wrapper">
           {services.service_card.map((card, i) => {
             return (
