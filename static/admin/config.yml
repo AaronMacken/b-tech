@@ -38,7 +38,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Subheading, name: subheading, widget: string}
-          - {label: Services, name: services, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Card1, name: card1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}]}, {label: Card2, name: card2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}]}, {label: Card3, name: card3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}]}]}
+          - {label: Services, name: services, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Card1, name: card1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}, {label: Card_text, name: card_text, widget: text}]}, {label: Card2, name: card2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}, {label: Card_text, name: card_text, widget: text}]}, {label: Card3, name: card3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Card_title, name: card_title, widget: string}, {label: Card_text, name: card_text, widget: text}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
