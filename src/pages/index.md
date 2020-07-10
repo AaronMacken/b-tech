@@ -1,9 +1,9 @@
 ---
 heading: Great coffee with a conscience
 templateKey: index-page
-title: Great coffee with a conscience
+title: Babylon Technologies
 image: /img/bg1.jpeg
-subheading: Support sustainable farming while enjoying a cup
+subheading: Making your IT related dreams come true!
 mainpitch:
   title: Why Kaldi
   description: >
@@ -67,7 +67,7 @@ description: Kaldi is the ultimate spot for coffee lovers who want to learn
   production, roasting and brewing seriously and we’re glad to pass that
   knowledge to anyone.
 services:
-  heading: Services
+  heading: Services, lol, it's what we do :p
   service_card:
     - card_title: Lorem 1
       image: /img/serv1.jpeg
@@ -80,4 +80,18 @@ services:
       image: /img/serv3.jpeg
       text: "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo "
+  card1:
+    image: /img/serv1.jpeg
+    card_title: Card 1
+    card_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut "
+  card2:
+    image: /img/serv2.jpeg
+    card_title: Card 2
+    card_text: "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation "
+  card3:
+    image: /img/serv3.jpeg
+    card_title: Card 3
+    card_text: "ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 ---
