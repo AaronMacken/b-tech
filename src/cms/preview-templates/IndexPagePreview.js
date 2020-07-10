@@ -11,7 +11,9 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={getAsset(data.image)}
         title={data.title}
         subheading={data.subheading}
-        services={data.services}
+        services={{
+          heading: entry.getIn(["data", "services", "heading"]),
+        }}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
       />
