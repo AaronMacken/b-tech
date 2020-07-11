@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 
 export const IndexPageTemplate = ({ image, title, subheading, services }) => {
+  const { card1, card2, card3 } = services;
   return (
     <>
       <section
@@ -32,11 +33,9 @@ export const IndexPageTemplate = ({ image, title, subheading, services }) => {
       <section className="landing-services">
         <h2>{services.heading}</h2>
         <div className="service-wrapper">
-          {services.service_card.map((card, i) => {
-            return (
-              <ImageCard image={card.image} text={card.text} card_title={card.card_title} key={i} />
-            );
-          })}
+          <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
+          <ImageCard image={card2.image} card_title={card2.card_title} text={card2.card_text} />
+          <ImageCard image={card3.image} card_title={card3.card_title} text={card3.card_text} />
         </div>
       </section>
     </>
@@ -82,25 +81,51 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         subheading
         services {
           heading
-          service_card {
+          card1 {
+            card_text
+            card_title
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 250, quality: 100) {
                   ...GatsbyImageSharpFluid
+                  src
                 }
               }
             }
-            text
+          }
+          card2 {
+            card_text
+            card_title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 250, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  src
+                }
+              }
+            }
+          }
+          card3 {
+            card_text
+            card_title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 250, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  src
+                }
+              }
+            }
+          }
+        }
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              src
+            }
           }
         }
       }
