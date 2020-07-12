@@ -137,6 +137,18 @@ body {
   box-shadow: 0 0 0 0.2rem #6305d5;
 }
 
+/* ============================= ABOUT ============================ */
+
+.landing-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  
+}
+
+
 /* ============================= SERVICES ============================ */
 
 .landing-services {
@@ -204,6 +216,45 @@ body {
 
 .service h3 {
   margin: 1rem;
+}
+
+
+/* ============================= FORM ============================ */
+
+.landing-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: #F0F5F8;
+}
+
+.form-input {
+  border-radius: 4.5px;
+  border: 1px solid #d4d4d4;
+  box-sizing: border-box;
+  color: #4f555a;
+  cursor: text;
+  display: inline-block;
+  padding: 18px;
+  width: 100%;
+  letter-spacing: normal;
+  font-size: 18px;
+  line-height: 20.7px;
+  margin-bottom: 1rem;
+}
+
+
+/* ============================= FOOTER ============================ */
+
+.footer {
+  height: 25rem;
+  background-color: #21212b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1920px) {
