@@ -38,7 +38,6 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Subheading, name: subheading, widget: string }
-          - { label: Contact_heading, name: contactheading, widget: string }
           - {
               label: Services,
               name: services,
@@ -93,6 +92,7 @@ collections:
               {label: LogoImage, name: logoimage, widget: image}
             ]
           }
+          - {label: Contactheading, name: contactheading, widget: string}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
