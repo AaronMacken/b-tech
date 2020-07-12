@@ -34,6 +34,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           text: entry.getIn(["data", "about", "text"]),
           signature: entry.getIn(["data", "about", "signature"]),
           image: getAsset(entry.getIn(["data", "about", "image"])),
+          logoimage: getAsset(entry.getIn(["data", "about", "logoimage"])),
         }}
       />
     );
