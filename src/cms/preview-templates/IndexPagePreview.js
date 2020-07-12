@@ -11,6 +11,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={getAsset(entry.getIn(["data", "image"]))}
         title={data.title}
         subheading={data.subheading}
+        contactheading={data.contactheading}
         services={{
           heading: entry.getIn(["data", "services", "heading"]),
           card1: {

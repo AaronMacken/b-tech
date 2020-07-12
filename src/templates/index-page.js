@@ -6,7 +6,14 @@ import ImageCard from "../components/ImageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-export const IndexPageTemplate = ({ image, title, subheading, services, about }) => {
+export const IndexPageTemplate = ({
+  image,
+  title,
+  subheading,
+  services,
+  about,
+  contactheading,
+}) => {
   const { card1, card2, card3 } = services;
   const { heading, text, signature, logoimage } = about;
   return (
@@ -76,7 +83,7 @@ export const IndexPageTemplate = ({ image, title, subheading, services, about })
         </div>
       </section>
       <section className="landing-form">
-        <h2>Hit us up</h2>
+        <h2>{contactheading}</h2>
         <form className="form-wrapper">
           <input type="text" placeholder="name" className="form-input" />
           <input type="email" placeholder="email" className="form-input" />
@@ -199,6 +206,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        contactheading
       }
     }
   }
