@@ -29,6 +29,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             card_text: entry.getIn(["data", "services", "card3", "card_text"]),
           },
         }}
+        about={{
+          heading: entry.getIn(["data", "about", "heading"]),
+          text: entry.getIn(["data", "about", "text"]),
+          signature: entry.getIn(["data", "about", "signature"]),
+        }}
       />
     );
   } else {
