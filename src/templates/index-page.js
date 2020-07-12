@@ -47,7 +47,14 @@ export const IndexPageTemplate = ({ image, title, subheading, services, about })
         <div className="container">
           <div className="row">
             <div className="col-md-7">
-              <img src={kyle} alt="Kyle Lmaoo" />
+              <img
+                src={`${
+                  !!about.image.childImageSharp
+                    ? about.image.childImageSharp.fluid.src
+                    : about.image
+                }`}
+                alt="Kyle Lmaoo"
+              />
             </div>
             <div className="col-md-5 about-wrapper">
               <p>
@@ -172,6 +179,13 @@ export const pageQuery = graphql`
           heading
           signature
           text
+          image {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         }
       }
     }
