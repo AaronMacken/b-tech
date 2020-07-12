@@ -38,7 +38,7 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Subheading, name: subheading, widget: string },
-          - { label: Contact Heading, name: contactheading, widget: string }
+          - { label: Contact_heading, name: contactheading, widget: string }
           - {
               label: Services,
               name: services,
