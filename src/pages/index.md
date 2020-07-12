@@ -29,4 +29,5 @@ about:
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu
   signature: Liam Morrison N suns - CEO
+  logoimage: /img/bteclogo.png
 ---
