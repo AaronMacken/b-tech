@@ -5,11 +5,10 @@ import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-import logo from "./bteclogo.png";
 
 export const IndexPageTemplate = ({ image, title, subheading, services, about }) => {
   const { card1, card2, card3 } = services;
-  const { heading, text, signature } = about;
+  const { heading, text, signature, logoimage } = about;
   return (
     <>
       <section
@@ -64,7 +63,13 @@ export const IndexPageTemplate = ({ image, title, subheading, services, about })
               </p>
               <div>
                 <h4>{signature}</h4>
-                <img src={logo} alt="Babylon Logo" className="about-logo" />
+                <img
+                  src={`${
+                    !!logoimage.childImageSharp ? logoimage.childImageSharp.fluid.src : logoimage
+                  }`}
+                  alt="Babylon Logo"
+                  className="about-logo"
+                />
               </div>
             </div>
           </div>
@@ -139,7 +144,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 400, quality: 100) {
                   src
                 }
               }
@@ -150,7 +155,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 400, quality: 100) {
                   src
                 }
               }
@@ -161,7 +166,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 400, quality: 100) {
                   src
                 }
               }
@@ -170,7 +175,7 @@ export const pageQuery = graphql`
         }
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 2040, quality: 100) {
               src
             }
           }
@@ -181,7 +186,14 @@ export const pageQuery = graphql`
           text
           image {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 400, quality: 100) {
+                src
+              }
+            }
+          }
+          logoimage {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
                 src
               }
             }

@@ -37,7 +37,8 @@ collections:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Subheading, name: subheading, widget: string },
+          - { label: Contact Heading, name: contactheading, widget: string }
           - {
               label: Services,
               name: services,
