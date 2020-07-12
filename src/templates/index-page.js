@@ -123,6 +123,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         services={frontmatter.services}
         about={frontmatter.about}
+        contactheading={frontmatter.contactheading}
       />
     </Layout>
   );
