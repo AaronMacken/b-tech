@@ -30,4 +30,5 @@ about:
     cillum dolore eu
   signature: Liam Morrison N suns - CEO
   logoimage: /img/bteclogo.png
+contactheading: Send us a message
 ---
