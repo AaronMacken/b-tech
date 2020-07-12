@@ -153,6 +153,11 @@ body {
   justify-content: space-evenly;
 }
 
+.about-logo {
+  width: 25rem;
+  height: auto;
+}
+
 
 
 /* ============================= SERVICES ============================ */

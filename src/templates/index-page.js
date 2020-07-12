@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
-import kyle from "./kyle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import logo from "./bteclogo.png";
 
 export const IndexPageTemplate = ({ image, title, subheading, services, about }) => {
   const { card1, card2, card3 } = services;
@@ -53,7 +53,7 @@ export const IndexPageTemplate = ({ image, title, subheading, services, about })
                     ? about.image.childImageSharp.fluid.src
                     : about.image
                 }`}
-                alt="Kyle Lmaoo"
+                alt="Founder Photo"
               />
             </div>
             <div className="col-md-5 about-wrapper">
@@ -64,7 +64,7 @@ export const IndexPageTemplate = ({ image, title, subheading, services, about })
               </p>
               <div>
                 <h4>{signature}</h4>
-                <h5>Place Logo Here</h5>
+                <img src={logo} alt="Babylon Logo" className="about-logo" />
               </div>
             </div>
           </div>
