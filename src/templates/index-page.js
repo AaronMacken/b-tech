@@ -7,8 +7,9 @@ import kyle from "./kyle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-export const IndexPageTemplate = ({ image, title, subheading, services }) => {
+export const IndexPageTemplate = ({ image, title, subheading, services, about }) => {
   const { card1, card2, card3 } = services;
+  const { heading, text, signature } = about;
   return (
     <>
       <section
@@ -42,23 +43,22 @@ export const IndexPageTemplate = ({ image, title, subheading, services }) => {
         </div>
       </section>
       <section className="landing-about">
-        <h2>Who We Are</h2>
+        <h2 style={{ marginBottom: "2rem" }}>{heading}</h2>
         <div className="container">
           <div className="row">
             <div className="col-md-7">
               <img src={kyle} alt="Kyle Lmaoo" />
             </div>
-            <div className="col-md-5">
+            <div className="col-md-5 about-wrapper">
               <p>
                 <FontAwesomeIcon icon={faQuoteLeft} />
-                We are very happy to work with Altar.io. The collaboration goes far beyond a
-                standard IT service: with Altar.io we have a sparring partner that challenges us in
-                our product decisions and is truly passionate about the results developed. The level
-                of professionalism and dedication is exceptional in this industry and we are eager
-                to strengthen our collaboration in the future.
+                <br />
+                {text}
               </p>
-              <h4>Liam Morison</h4>
-              <h5>Place Logo Here</h5>
+              <div>
+                <h4>{signature}</h4>
+                <h5>Place Logo Here</h5>
+              </div>
             </div>
           </div>
         </div>
@@ -103,6 +103,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         services={frontmatter.services}
+        about={frontmatter.about}
       />
     </Layout>
   );
@@ -131,8 +132,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid(maxWidth: 250, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                fluid {
                   src
                 }
               }
@@ -143,8 +143,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid(maxWidth: 250, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                fluid {
                   src
                 }
               }
@@ -155,8 +154,7 @@ export const pageQuery = graphql`
             card_title
             image {
               childImageSharp {
-                fluid(maxWidth: 250, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                fluid {
                   src
                 }
               }
@@ -169,6 +167,11 @@ export const pageQuery = graphql`
               src
             }
           }
+        }
+        about {
+          heading
+          signature
+          text
         }
       }
     }

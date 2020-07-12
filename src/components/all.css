@@ -145,8 +145,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
-  
 }
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 
 
 /* ============================= SERVICES ============================ */
