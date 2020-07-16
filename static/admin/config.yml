@@ -81,18 +81,19 @@ collections:
                 ],
             }
           - {
-            label: About,
-            name: about,
-            widget: object,
-            fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Image, name: image, widget: image},
-              {label: Text, name: text, widget: text},
-              {label: Signature, name: signature, widget: string},
-              {label: LogoImage, name: logoimage, widget: image}
-            ]
-          }
-          - {label: Contactheading, name: contactheading, widget: string}
+              label: About,
+              name: about,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Image, name: image, widget: image },
+                  { label: Text, name: text, widget: text },
+                  { label: Signature, name: signature, widget: string },
+                  { label: LogoImage, name: logoimage, widget: image },
+                ],
+            }
+          - { label: Contactheading, name: contactheading, widget: string }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
