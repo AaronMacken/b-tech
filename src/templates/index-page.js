@@ -20,14 +20,14 @@ export const IndexPageTemplate = ({
     <>
       <section
         className="landing-hero"
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        // style={{
+        //   backgroundImage: `linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url(${
+        //     !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        //   })`,
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
         <div className="hero-heading">
           <h1>{title}</h1>
@@ -85,7 +85,13 @@ export const IndexPageTemplate = ({
       <section className="landing-form">
         <h2>{contactheading}</h2>
         <form className="form-wrapper">
-          <input type="text" placeholder="name" className="form-input" />
+          <input
+            type="text"
+            placeholder="name"
+            className="form-input"
+            data-netlify="true"
+            name="contact"
+          />
           <input type="email" placeholder="email" className="form-input" />
           <textarea
             name="message"
