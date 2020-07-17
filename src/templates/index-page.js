@@ -85,14 +85,16 @@ export const IndexPageTemplate = ({
       <section className="landing-form">
         <h2>{contactheading}</h2>
         <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
-          <input type="text" placeholder="name" className="form-input" name="name" />
-          <input type="text" placeholder="email" className="form-input" name="email" />
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" placeholder="name" className="form-input" name="name" required />
+          <input type="email" placeholder="email" className="form-input" name="email" required />
           <textarea
             name="message"
             placeholder="message"
             cols="30"
             rows="10"
             className="form-input"
+            required
           ></textarea>
           <button type="submit" className="button">
             Send Message
