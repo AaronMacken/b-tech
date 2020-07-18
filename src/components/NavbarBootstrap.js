@@ -48,7 +48,7 @@ class NavbarBootstrap extends Component {
   render() {
     // bootstrap navbar default style, changes to dark if user scrolls
     let navbarStyle = "transparent";
-    if (this.state.mobile) {
+    if (this.state.mobile || this.props.flat) {
       navbarStyle = "dark";
     } else {
       if (!this.state.mobile && !this.state.scrolling) {
