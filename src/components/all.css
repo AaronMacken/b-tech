@@ -264,6 +264,15 @@ body {
   background-color: #f0f5f8;
 }
 
+.contact-thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+  background-color: #f0f5f8;
+}
+
 /* ============================= FOOTER ============================ */
 
 .footer {
