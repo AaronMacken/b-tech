@@ -70,13 +70,13 @@ class NavbarBootstrap extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-center">
-            <Link className="navbar-item" to="/">
+            <Link className="navbar-item" to="/" className="navi-link">
               Home
             </Link>
-            <Link className="navbar-item" to="/contact">
+            <Link className="navbar-item" to="/contact" className="navi-link">
               Contact
             </Link>
-            <Link className="navbar-item" to="/blog">
+            <Link className="navbar-item" to="/blog" className="navi-link">
               F.A.Q.
             </Link>
           </Nav>

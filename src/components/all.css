@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 *,
 *::before,
 *::after {
@@ -12,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
   height: 100%;
 }
 
@@ -20,18 +18,101 @@ body {
   transition: all 0.5s;
 }
 
+.navi-link {
+  color: white;
+  margin: 0.25rem;
+}
+
+.navi-link:hover {
+  color: white;
+}
+
 .transparent {
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
+  background-color: #0b4c8a !important;
 }
 
 .dark {
   background-color: #0b4c8a !important;
 }
 
+.section-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: black;
+  font-weight: 200;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* ======================================= LANDING HERO ============================ */
+
 .landing-hero {
   height: 100vh;
   min-height: 50rem;
-  /* background-image: linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url('./bg1.jpeg'); */
+  background-image: url("./img1.jpg");
+  background-position: center;
+  background-size: cover;
+  max-width: inherit !important;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 17%;
+}
+
+#babylon {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  color: darkblue;
+  font-weight: 800;
+  margin-top: 25%;
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+
+#tech {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  margin-top: 1px;
+  margin-left: 10px;
+  margin-bottom: 1px;
+  color: rgb(49, 125, 224);
+  font-weight: 800;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: slategrey;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+}
+
+#servicesbtn {
+  color: whitesmoke;
+  margin-right: 2rem;
+  min-width: 12rem;
+}
+#contactbtn {
+  color: whitesmoke;
+  min-width: 12rem;
+}
+
+/* 
+.landing-hero {
+  height: 100vh;
+  min-height: 50rem;
+  background-image: linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url('./bg1.jpeg');
   padding-top: 6rem;
   background-position: center;
   background-size: cover;
@@ -42,101 +123,8 @@ body {
   grid-row-gap: 0px;
 }
 
-.landing-hero div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.hero-heading {
-  grid-area: 2 / 2 / 3 / 6;
-}
 
-.hero-heading h1 {
-  font-size: 5rem;
-  color: #0b4c8a;
-  font-weight: 600 !important;
-  font-family: "Merriweather", serif !important;
-
-  font-family: serif;
-  letter-spacing: 2px;
-  font-weight: 100;
-  /* text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.755); */
-}
-
-.hero-subheading {
-  grid-area: 3 / 2 / 4 / 6;
-  padding: 0 5rem;
-  max-width: 70rem;
-  margin: auto;
-}
-
-.hero-subheading p {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
-.hero-button-container {
-  grid-area: 4 / 2 / 5 / 6;
-}
-
-#hero-button-container {
-  flex-direction: row;
-}
-
-#hero-button-container .button {
-  margin-right: 2rem;
-}
-
-.button {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
-  color: #fff;
-  background-color: #50129d;
-  border: 1px solid #50129d;
-  transition: all 0.2s;
-}
-
-.button:hover,
-.button:active {
-  background-color: #6305d5;
-  border-color: #6305d5;
-  outline: #6305d5;
-}
-
-.button:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem #6305d5;
-}
-
-.button-ghost {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
-  color: #fff;
-  font-weight: 600;
-  background-color: transparent;
-  border: 3px solid #50129d;
-  transition: all 0.2s;
-}
-
-.button-ghost:hover,
-.button-ghost:active {
-  background-color: #6305d5;
-  border-color: #6305d5;
-  color: #fff;
-}
-
-.button-ghost:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem #6305d5;
-}
 
 /* ============================= ABOUT ============================ */
 
@@ -152,11 +140,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.about-img-col {
+  display: flex;
+  justify-content: center;
+}
+
+.about-text-wrapper {
+  padding: 2rem;
+}
+
+.quote {
+  font-size: 3rem;
+  color: rgb(49, 125, 224);
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
 }
 
 .about-logo {
-  width: 25rem;
-  height: auto;
+  height: 25rem;
+  width: auto;
 }
 
 /* ============================= SERVICES ============================ */
@@ -168,10 +177,6 @@ body {
   align-items: center;
   padding: 5rem 0;
   background-color: #f0f5f8;
-}
-
-.landing-services h2 {
-  margin-bottom: 3rem;
 }
 
 .service-wrapper {
@@ -195,6 +200,7 @@ body {
 .underline {
   position: relative;
   display: inline-block;
+  font-size: 1.25rem;
 }
 
 .underline::after {
@@ -207,7 +213,7 @@ body {
   height: 3px !important;
   width: 25%;
   left: 39%;
-  background-color: #551c9b;
+  background-color: rgb(49, 125, 224);
   transition: 0.4s ease-out all 0.1s;
 }
 
@@ -237,6 +243,10 @@ body {
   align-items: center;
   padding: 5rem 0;
   background-color: #f0f5f8;
+}
+
+.form-wrapper {
+  padding: 0 1rem;
 }
 
 .form-input {
@@ -334,6 +344,48 @@ body {
   .hero-subheading {
     padding: 0 3rem;
     grid-area: 3 / 1 / 4 / 7;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text {
+    margin-left: 0;
+  }
+
+  #babylon {
+    font-size: 2.5rem;
+  }
+  #tech {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+  #servicesbtn {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  #contactbtn {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .about-logo {
+    height: 10rem;
+    width: auto;
   }
 }
 

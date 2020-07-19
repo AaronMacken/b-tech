@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faPhone, faStream } from "@fortawesome/free-solid-svg-icons";
 
 export const IndexPageTemplate = ({
   image,
@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
   return (
     <>
       <section
-        className="landing-hero"
+        className="landing-hero container"
         // style={{
         //   backgroundImage: `linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url(${
         //     !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -29,19 +29,31 @@ export const IndexPageTemplate = ({
         //   backgroundRepeat: "no-repeat",
         // }}
       >
-        <div className="hero-heading">
-          <h1>{title}</h1>
-        </div>
-        <div className="hero-subheading">
-          <p>{subheading}</p>
-        </div>
-        <div className="hero-button-container" id="hero-button-container">
-          <button className="button">Our Services</button>
-          <button className="button-ghost">Contact Us</button>
+        <div className="row">
+          <div className="col-md-4 mb-4 hero-text">
+            <div>
+              <h1 id="babylon">Babylon</h1>
+              <h1 id="tech">Technology</h1>
+            </div>
+
+            <hr />
+            <p className="subheading">
+              <strong>{subheading}</strong>
+            </p>
+            <div className="hero-buttons">
+              <a target="_blank" className="btn btn-primary btn-lg" id="servicesbtn">
+                Our Services <FontAwesomeIcon icon={faStream} />
+              </a>
+
+              <a target="_blank" className="btn btn-primary btn-lg" id="contactbtn">
+                Contact Us <FontAwesomeIcon icon={faPhone} />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       <section className="landing-services">
-        <h2>{services.heading}</h2>
+        <h2 className="section-heading">{services.heading}</h2>
         <div className="service-wrapper">
           <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
           <ImageCard image={card2.image} card_title={card2.card_title} text={card2.card_text} />
@@ -49,41 +61,35 @@ export const IndexPageTemplate = ({
         </div>
       </section>
       <section className="landing-about">
-        <h2 style={{ marginBottom: "2rem" }}>{heading}</h2>
+        <h2 className="section-heading">{heading}</h2>
         <div className="container">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-md-6 about-img-col">
               <img
                 src={`${
-                  !!about.image.childImageSharp
-                    ? about.image.childImageSharp.fluid.src
-                    : about.image
+                  !!logoimage.childImageSharp ? logoimage.childImageSharp.fluid.src : logoimage
                 }`}
-                alt="Founder Photo"
+                className="about-logo"
+                alt="Babylon Technologies Logo"
               />
             </div>
-            <div className="col-md-5 about-wrapper">
-              <p>
-                <FontAwesomeIcon icon={faQuoteLeft} />
-                <br />
-                {text}
-              </p>
-              <div>
-                <h4>{signature}</h4>
-                <img
-                  src={`${
-                    !!logoimage.childImageSharp ? logoimage.childImageSharp.fluid.src : logoimage
-                  }`}
-                  alt="Babylon Logo"
-                  className="about-logo"
-                />
+            <div className="col-md-6 about-wrapper">
+              <div className="about-text-wrapper">
+                <p>
+                  <FontAwesomeIcon icon={faQuoteLeft} className="quote" />
+                  <br />
+                  <p className="about-text">{text}</p>
+                </p>
+                <div>
+                  <h4>{signature}</h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section className="landing-form">
-        <h2>{contactheading}</h2>
+        <h2 className="section-heading">{contactheading}</h2>
         <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" placeholder="name *" className="form-input" name="name" required />
@@ -97,7 +103,7 @@ export const IndexPageTemplate = ({
             className="form-input"
             required
           ></textarea>
-          <button type="submit" className="button">
+          <button type="submit" className="btn btn-primary btn-lg">
             Send Message
           </button>
         </form>

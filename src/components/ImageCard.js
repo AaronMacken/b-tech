@@ -9,7 +9,7 @@ const ImageCard = ({ image, text, card_title }) => {
         alt={card_title}
         className="service-img"
       />
-      <h3>{card_title}</h3>
+      <h3 className="card-title">{card_title}</h3>
       <p className="underline">{text}</p>
     </div>
   );
