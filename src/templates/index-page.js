@@ -4,7 +4,8 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft, faPhone, faStream } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faStream, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export const IndexPageTemplate = ({
   image,
@@ -41,18 +42,31 @@ export const IndexPageTemplate = ({
               <strong>{subheading}</strong>
             </p>
             <div className="hero-buttons">
-              <a target="_blank" className="btn btn-primary btn-lg" id="servicesbtn">
+              <ScrollLink
+                className="btn btn-primary btn-lg"
+                id="servicesbtn"
+                to="services-section"
+                offset={-50}
+                smooth
+              >
                 Our Services <FontAwesomeIcon icon={faStream} />
-              </a>
+              </ScrollLink>
 
-              <a target="_blank" className="btn btn-primary btn-lg" id="contactbtn">
-                Contact Us <FontAwesomeIcon icon={faPhone} />
-              </a>
+              <ScrollLink
+                className="btn btn-primary btn-lg"
+                id="contactbtn"
+                to="contact-section"
+                offset={-50}
+                duration={1000}
+                smooth
+              >
+                Contact Us <FontAwesomeIcon icon={faEnvelope} />
+              </ScrollLink>
             </div>
           </div>
         </div>
       </section>
-      <section className="landing-services">
+      <section className="landing-services" name="services-section">
         <h2 className="section-heading">{services.heading}</h2>
         <div className="service-wrapper">
           <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
@@ -88,7 +102,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      <section className="landing-form">
+      <section className="landing-form" name="contact-section">
         <h2 className="section-heading">{contactheading}</h2>
         <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
           <input type="hidden" name="form-name" value="contact" />
