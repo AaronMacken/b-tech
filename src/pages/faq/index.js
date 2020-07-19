@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
+import FaqRoll from "../../components/FaqRoll";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -15,7 +15,7 @@ export default class BlogIndexPage extends React.Component {
           </div>
 
           {/* CARDS */}
-          <BlogRoll />
+          <FaqRoll />
         </section>
       </Layout>
     );

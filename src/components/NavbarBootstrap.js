@@ -76,7 +76,7 @@ class NavbarBootstrap extends Component {
             <Link className="navbar-item" to="/contact" className="navi-link">
               Contact
             </Link>
-            <Link className="navbar-item" to="/blog" className="navi-link">
+            <Link className="navbar-item" to="/faq" className="navi-link">
               F.A.Q.
             </Link>
           </Nav>
