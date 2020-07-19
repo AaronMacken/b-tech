@@ -126,7 +126,7 @@ body {
 
 
 
-/* ============================= ABOUT ============================ */
+/* ============================= LANDING ABOUT ============================ */
 
 .landing-about {
   display: flex;
@@ -168,7 +168,7 @@ body {
   width: auto;
 }
 
-/* ============================= SERVICES ============================ */
+/* ============================= LANDING SERVICES ============================ */
 
 .landing-services {
   display: flex;
@@ -234,7 +234,7 @@ body {
   margin: 1rem;
 }
 
-/* ============================= FORM ============================ */
+/* ============================= LANDING CONTACT FORM ============================ */
 
 .landing-form {
   display: flex;
@@ -287,7 +287,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* ============================= FOOTER ============================ */
+/* =============================  FOOTER ============================ */
 
 .footer {
   height: 25rem;
@@ -297,6 +297,69 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* ============================= 404 ============================ */
+
+.not-found {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ============================= BLOG INDEX ============================ */
+
+.faq-section {
+  background-color: #e1eefa;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.faqcard {
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 1170px;
+  /* max-height: 250px; */
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.faq-title-wrapper {
+  padding: 2rem;
+  text-align: center;
+}
+
+.faqtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  color: darkblue;
+  font-weight: 800;
+}
+
+.faqtitle2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+
+  color: rgb(49, 125, 224);
+  font-weight: 800;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============================= MEDIA QUERIES ============================ */
 
 @media screen and (min-width: 1920px) {
   .service-wrapper {
@@ -308,6 +371,13 @@ body {
   }
   .service-img {
     width: 25rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .faq-title-wrapper {
+    align-self: flex-start;
+    text-align: initial;
   }
 }
 
@@ -364,6 +434,11 @@ body {
   .contact-page-subheading {
     font-size: 1.15rem;
   }
+
+  .faqtitle,
+  .faqtitle2 {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -372,5 +447,9 @@ body {
   }
   .service-img {
     width: 15rem;
+  }
+
+  .faqtitle {
+    font-size: 2.75rem;
   }
 }
