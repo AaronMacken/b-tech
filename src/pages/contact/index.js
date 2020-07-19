@@ -37,9 +37,13 @@ export default class Index extends React.Component {
     return (
       <Layout flat>
         <section className="landing-form" style={{ minHeight: "100vh", justifyContent: "initial" }}>
-          <div style={{ marginBottom: "3rem" }}>
-            <h1 style={{ marginTop: "5rem" }}>Interested in working with us?</h1>
-            <p>Send us an email and someone will reach out to you soon!</p>
+          <div style={{ marginBottom: "3rem", textAlign: "center" }}>
+            <h1 style={{ marginTop: "5rem" }} className="section-heading">
+              Interested in working with us?
+            </h1>
+            <p className="contact-page-subheading">
+              Send us an email and someone will reach out to you soon!
+            </p>
           </div>
 
           <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
@@ -61,7 +65,7 @@ export default class Index extends React.Component {
               className="form-input"
               required
             ></textarea>
-            <button type="submit" className="button">
+            <button type="submit" className="btn btn-primary btn-lg">
               Send Message
             </button>
           </form>
