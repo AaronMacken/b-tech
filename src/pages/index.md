@@ -5,12 +5,12 @@ title: Babylon Technologies
 image: /img/bg1.jpeg
 subheading: Making your IT related dreams come true!
 services:
-  heading: Services, lol, it's what we do :p
+  heading: Services
   card1:
-    image: /img/serv1.jpeg
-    card_title: Card 1
-    card_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut "
+    image: /img/chemex.jpg
+    card_title: Consulting
+    card_text: We been fixin shit for a long time. We gone be fixing shit for a lot
+      longer. - Pepperage Farmz Member?
   card2:
     image: /img/serv2.jpeg
     card_title: Card 2
