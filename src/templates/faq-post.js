@@ -1,23 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { FaArrowLeft } from "react-icons/fa";
 
-export const FaqPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
+export const FaqPostTemplate = ({ content, contentComponent, description, title, helmet }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className="faq-post-section">
       {helmet || ""}
       <div className="container content">
         <div className="columns">
@@ -25,18 +18,9 @@ export const FaqPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+            <Link to="/faq" className="btn btn-primary btn-lg">
+              <FaArrowLeft /> Back to Blogs
+            </Link>
           </div>
         </div>
       </div>
@@ -91,7 +75,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
       }
     }
   }
