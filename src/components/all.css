@@ -397,6 +397,13 @@ body {
   align-items: center;
   margin-top: 6rem;
   margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.faq-post-section img {
+  max-width: 1170px;
+  width: 75vw;
+  height: auto;
 }
 
 /* ============================= MEDIA QUERIES ============================ */
