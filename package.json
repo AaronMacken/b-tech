@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.0",
     "bulma": "^0.9.0",
     "gatsby": "^2.20.35",
+    "gatsby-cli": "^2.12.65",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
