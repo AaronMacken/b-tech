@@ -38,12 +38,12 @@ export default class Index extends React.Component {
       <Layout flat>
         <section className="landing-form" style={{ minHeight: "100vh", justifyContent: "initial" }}>
           <div style={{ marginBottom: "3rem", textAlign: "center" }}>
-            <h1 style={{ marginTop: "4rem" }} className="section-heading">
+            <h1 style={{ marginTop: "4rem" }} className="section-heading title-dark">
               Interested in working with us?
             </h1>
-            <p className="contact-page-subheading">
+            <h4 className="contact-page-subheading title-light">
               Send us an email and someone will reach out to you soon!
-            </p>
+            </h4>
           </div>
 
           <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
