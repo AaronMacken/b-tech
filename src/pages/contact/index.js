@@ -46,7 +46,7 @@ export default class Index extends React.Component {
             </h4>
           </div>
 
-          <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
+          <form className="form-wrapper" data-netlify="true" name="contact2" method="POST">
             <input type="hidden" name="form-name" value="contact" />
             <input type="text" placeholder="name *" className="form-input" name="name" required />
             <input
