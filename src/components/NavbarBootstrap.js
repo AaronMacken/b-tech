@@ -66,7 +66,12 @@ class NavbarBootstrap extends Component {
         style={{ padding: "1rem 5%" }}
         fixed="top"
       >
-        <Navbar.Brand href="#home">Babylon Tech.</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/" className="navi-link">
+            <img src="/img/bteclogowhite.png" style={{ height: "2.5rem", marginRight: "1rem" }} />
+            Babylon Technologies
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-center">
