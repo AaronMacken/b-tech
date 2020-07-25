@@ -21,7 +21,7 @@ services:
     card_title: Card 3
     card_text: "ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 about:
-  heading: Who are dem babylions anyways?
+  heading: About Babylon
   image: /img/kyle.png
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
