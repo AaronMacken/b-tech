@@ -7,7 +7,7 @@ subheading: Making your IT related dreams come true!
 services:
   heading: Services
   card1:
-    image: /img/chemex.jpg
+    image: /img/serv1.jpeg
     card_title: Consulting
     card_text: We been fixin shit for a long time. We gone be fixing shit for a lot
       longer. - Pepperage Farmz Member?
@@ -22,7 +22,7 @@ services:
     card_text: "ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 about:
   heading: About Babylon
-  image: /img/kyle.png
+  image: /img/bteclogo.png
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
