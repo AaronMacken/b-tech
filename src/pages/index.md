@@ -7,7 +7,7 @@ subheading: Making your IT related dreams come true!
 services:
   heading: Services
   card1:
-    image: /img/chemex.jpg
+    image: /img/serv1.jpeg
     card_title: Consulting
     card_text: We been fixin shit for a long time. We gone be fixing shit for a lot
       longer. - Pepperage Farmz Member?
