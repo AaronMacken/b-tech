@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({
   contactheading,
 }) => {
   const { card1, card2, card3 } = services;
-  const { heading, text, signature, logoimage } = about;
+  const { heading, text, signature } = about;
   return (
     <>
       <section
@@ -70,9 +70,9 @@ export const IndexPageTemplate = ({
       <section className="landing-services" name="services-section">
         <h2 className="section-heading title-dark">{services.heading}</h2>
         <div className="service-wrapper">
-          <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
+          {/* <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
           <ImageCard image={card2.image} card_title={card2.card_title} text={card2.card_text} />
-          <ImageCard image={card3.image} card_title={card3.card_title} text={card3.card_text} />
+          <ImageCard image={card3.image} card_title={card3.card_title} text={card3.card_text} /> */}
         </div>
 
         <Link to="/services" className="btn btn-primary btn-lg text-white mt-3">
@@ -84,13 +84,13 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-6 about-img-col">
-              <img
+              {/* <img
                 src={`${
                   !!logoimage.childImageSharp ? logoimage.childImageSharp.fluid.src : logoimage
                 }`}
                 className="about-logo"
                 alt="Babylon Technologies Logo"
-              />
+              /> */}
             </div>
             <div className="col-md-6 about-wrapper">
               <div className="about-text-wrapper">
@@ -149,7 +149,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         services={frontmatter.services}
@@ -181,65 +180,96 @@ export const pageQuery = graphql`
           card1 {
             card_text
             card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
           }
           card2 {
             card_text
             card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
           }
           card3 {
             card_text
             card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
           }
         }
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2040, quality: 100) {
-              src
-            }
-          }
-        }
+
         about {
           heading
           signature
           text
-          image {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                src
-              }
-            }
-          }
-          logoimage {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                src
-              }
-            }
-          }
         }
         contactheading
       }
     }
   }
 `;
+
+// query MyQuery {
+//   markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+//     frontmatter {
+//       title
+//       subheading
+//       services {
+//         heading
+//         card1 {
+//           card_text
+//           card_title
+//           image {
+//             childImageSharp {
+//               fluid(maxWidth: 400, quality: 100) {
+//                 src
+//               }
+//             }
+//           }
+//         }
+//         card2 {
+//           card_text
+//           card_title
+//           image {
+//             childImageSharp {
+//               fluid(maxWidth: 400, quality: 100) {
+//                 src
+//               }
+//             }
+//           }
+//         }
+//         card3 {
+//           card_text
+//           card_title
+//           image {
+//             childImageSharp {
+//               fluid(maxWidth: 400, quality: 100) {
+//                 src
+//               }
+//             }
+//           }
+//         }
+//       }
+//       image {
+//         childImageSharp {
+//           fluid(maxWidth: 2040, quality: 100) {
+//             src
+//           }
+//         }
+//       }
+//       about {
+//         heading
+//         signature
+//         text
+//         image {
+//           childImageSharp {
+//             fluid(maxWidth: 400, quality: 100) {
+//               src
+//             }
+//           }
+//         }
+//         logoimage {
+//           childImageSharp {
+//             fluid(maxWidth: 400, quality: 100) {
+//               src
+//             }
+//           }
+//         }
+//       }
+//       contactheading
+//     }
+//   }
+// }
