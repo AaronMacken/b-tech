@@ -39,7 +39,7 @@ body {
 
 .section-heading {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 3rem !important;
   color: black;
   font-weight: 200;
   margin-bottom: 3rem;
@@ -216,12 +216,13 @@ body {
 .about-us-service-section-text {
   font-family: "Montserrat", sans-serif;
   font-size: 1.75rem;
-  font-weight: 300;
+  font-weight: 400;
   color: slategray;
   text-align: center;
   width: 50vw;
   max-width: 50rem;
   padding: 2rem;
+  padding-top: 1rem;
   min-width: 300px;
 }
 
@@ -235,6 +236,49 @@ body {
 
 .about-page-services-link {
   font-weight: 400;
+}
+
+.about-page-beleifs-section {
+  padding: 5rem;
+}
+
+.belief-card-contaier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  color: slategray;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px !important;
+  width: 20rem;
+}
+
+.card-title-b {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(49, 125, 224);
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+.belief-icon {
+  height: 10rem;
+  width: 10rem;
+}
+
+.about-page-content {
+  padding: 2rem;
 }
 
 /* ============================= LANDING SERVICES ============================ */
@@ -466,17 +510,6 @@ body {
   max-width: 1170px;
 }
 
-.card {
-  margin-bottom: 2rem;
-}
-
-.card-cascade {
-  margin-left: 33%;
-  margin-right: 33%;
-  margin-top: 2%;
-  border-radius: 25px;
-}
-
 /* ============================= FAQ PAGE ============================ */
 
 .faq-post-section {
@@ -539,6 +572,9 @@ body {
   .about-page-service-section {
     padding: 2rem;
   }
+  .belief-card-contaier {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -576,11 +612,7 @@ body {
   }
 
   .section-heading {
-    font-size: 2rem;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
+    font-size: 2rem !important;
   }
 
   .about-logo {
@@ -604,6 +636,16 @@ body {
   }
   .about-page-service-section {
     padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .belief-icon {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .card-title-b {
+    font-size: 1.5rem;
   }
 }
 
@@ -628,5 +670,14 @@ body {
   .about-us-service-section-text {
     width: 95vw;
     font-size: 1.25rem;
+  }
+  .about-page-beleifs-section {
+    padding: 2rem;
+  }
+  #about-page-heading {
+    margin-bottom: 1rem;
+  }
+  .card {
+    width: 280px;
   }
 }
