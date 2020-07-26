@@ -183,6 +183,38 @@ body {
   width: auto;
 }
 
+/* ============================= ABOUT PAGE SECTION ============================ */
+.about-page-section {
+  min-height: 100vh;
+  padding-top: 5rem;
+  background-color: #e1eefa;
+}
+
+.about-page-header-wrapper {
+  margin-top: 4rem;
+}
+
+.about-page-white {
+  background-color: white;
+}
+
+.about-page-service-section {
+  padding: 10rem;
+}
+
+.about-us-service-section-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: slategray;
+  text-align: center;
+}
+
+.about-page-service-section-img {
+  height: 25rem;
+  width: auto;
+}
+
 /* ============================= LANDING SERVICES ============================ */
 
 .landing-services {

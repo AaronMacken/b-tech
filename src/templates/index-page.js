@@ -16,11 +16,11 @@ export const IndexPageTemplate = ({
   about,
   contactheading,
 }) => {
-  const { card1, card2, card3 } = services;
-  const { heading, text, signature, logoimage } = about;
+  // const { card1, card2, card3 } = services;
+  // const { heading, text, signature, logoimage } = about;
   return (
     <>
-      <section
+      {/* <section
         className="landing-hero container"
         // style={{
         //   backgroundImage: `linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(30,30,30,0.18110994397759106) 100%),url(${
@@ -129,7 +129,7 @@ export const IndexPageTemplate = ({
             Send Message
           </button>
         </form>
-      </section>
+      </section> */}
     </>
   );
 };
@@ -149,12 +149,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        subheading={frontmatter.subheading}
-        services={frontmatter.services}
-        about={frontmatter.about}
-        contactheading={frontmatter.contactheading}
+      // image={frontmatter.image}
+      // title={frontmatter.title}
+      // subheading={frontmatter.subheading}
+      // services={frontmatter.services}
+      // about={frontmatter.about}
+      // contactheading={frontmatter.contactheading}
       />
     </Layout>
   );
@@ -170,76 +170,76 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query MyQuery {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        title
-        subheading
-        services {
-          heading
-          card1 {
-            card_text
-            card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
-          }
-          card2 {
-            card_text
-            card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
-          }
-          card3 {
-            card_text
-            card_title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  src
-                }
-              }
-            }
-          }
-        }
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2040, quality: 100) {
-              src
-            }
-          }
-        }
-        about {
-          heading
-          signature
-          text
-          image {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                src
-              }
-            }
-          }
-          logoimage {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                src
-              }
-            }
-          }
-        }
-        contactheading
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query MyQuery {
+//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+//       frontmatter {
+//         title
+//         subheading
+//         services {
+//           heading
+//           card1 {
+//             card_text
+//             card_title
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 400, quality: 100) {
+//                   src
+//                 }
+//               }
+//             }
+//           }
+//           card2 {
+//             card_text
+//             card_title
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 400, quality: 100) {
+//                   src
+//                 }
+//               }
+//             }
+//           }
+//           card3 {
+//             card_text
+//             card_title
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 400, quality: 100) {
+//                   src
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         image {
+//           childImageSharp {
+//             fluid(maxWidth: 2040, quality: 100) {
+//               src
+//             }
+//           }
+//         }
+//         about {
+//           heading
+//           signature
+//           text
+//           image {
+//             childImageSharp {
+//               fluid(maxWidth: 400, quality: 100) {
+//                 src
+//               }
+//             }
+//           }
+//           logoimage {
+//             childImageSharp {
+//               fluid(maxWidth: 400, quality: 100) {
+//                 src
+//               }
+//             }
+//           }
+//         }
+//         contactheading
+//       }
+//     }
+//   }
+// `;

@@ -5,33 +5,6 @@ module.exports = {
     siteUrl: "https://brave-wescoff-f4e850.netlify.app",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
-      options: {
-        fonts: [
-          {
-            family: "Montserrat",
-            variants: [100, 200, 300, 400, 500, 600, 700, 800],
-          },
-        ],
-      },
-    },
-    {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/static/img`,
-        name: "uploads",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
-    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -60,6 +33,33 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: "Montserrat",
+            variants: [100, 200, 300, 400, 500, 600, 700, 800],
+          },
+        ],
+      },
+    },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "uploads",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "pages",
       },
     },
     {
