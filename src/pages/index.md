@@ -2,7 +2,7 @@
 heading: Great coffee with a conscience
 templateKey: index-page
 title: Babylon Technologies
-image: /img/bg1.jpeg
+image: /img/bteclogo.png
 subheading: Making your IT related dreams come true!
 services:
   heading: Services
