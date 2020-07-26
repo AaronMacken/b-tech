@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ImageCard = ({ image, text, card_title }) => {
   return (
-    <div className="service">
+    <div className="service shadow">
       <img
         src={`${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`}
         alt={card_title}

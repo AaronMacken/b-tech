@@ -69,7 +69,6 @@ class NavbarBootstrap extends Component {
         <Navbar.Brand>
           <Link to="/" className="navi-link">
             <img src="/img/bteclogowhite.png" style={{ height: "2.5rem", marginRight: "1rem" }} />
-            Babylon Technologies
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
