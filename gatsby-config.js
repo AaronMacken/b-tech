@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Babylon Technologies",
     description: "Babylon Technologies | IT Services, Consulting, and more!",
+    siteUrl: "https://brave-wescoff-f4e850.netlify.app",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

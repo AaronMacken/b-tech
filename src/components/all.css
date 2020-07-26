@@ -20,7 +20,8 @@ body {
 
 .navi-link {
   color: white;
-  margin: 0.25rem;
+  margin: 1rem;
+  font-size: 1.25rem;
 }
 
 .navi-link:hover {
@@ -256,7 +257,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
-  background-color: #f0f5f8;
+  background-color: #e1eefa;
 }
 
 .form-wrapper {

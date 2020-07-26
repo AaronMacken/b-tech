@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import ImageCard from "../components/ImageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faStream, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FaArrowRight } from "react-icons/fa";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export const IndexPageTemplate = ({
@@ -67,17 +68,21 @@ export const IndexPageTemplate = ({
         </div>
       </section>
       <section className="landing-services" name="services-section">
-        <h2 className="section-heading">{services.heading}</h2>
+        <h2 className="section-heading title-dark">{services.heading}</h2>
         <div className="service-wrapper">
           <ImageCard image={card1.image} card_title={card1.card_title} text={card1.card_text} />
           <ImageCard image={card2.image} card_title={card2.card_title} text={card2.card_text} />
           <ImageCard image={card3.image} card_title={card3.card_title} text={card3.card_text} />
         </div>
+
+        <Link to="/services" className="btn btn-primary btn-lg text-white mt-3">
+          Read more <FaArrowRight style={{ marginLeft: ".5rem" }} />
+        </Link>
       </section>
       <section className="landing-about">
-        <h2 className="section-heading">{heading}</h2>
+        <h2 className="section-heading title-light">{heading}</h2>
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-md-6 about-img-col">
               <img
                 src={`${
@@ -99,11 +104,14 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
             </div>
+            <Link to="/about" className="btn btn-primary btn-lg text-white">
+              Read more <FaArrowRight style={{ marginLeft: ".5rem" }} />
+            </Link>
           </div>
         </div>
       </section>
       <section className="landing-form" name="contact-section">
-        <h2 className="section-heading">{contactheading}</h2>
+        <h2 className="section-heading title-dark">{contactheading}</h2>
         <form className="form-wrapper" data-netlify="true" name="contact" method="POST">
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" placeholder="name *" className="form-input" name="name" required />
