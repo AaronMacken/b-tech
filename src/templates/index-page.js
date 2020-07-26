@@ -103,10 +103,10 @@ export const IndexPageTemplate = ({
                   <h4>{signature}</h4>
                 </div>
               </div>
+              <Link to="/about" className="btn btn-primary btn-lg text-white">
+                Read more <FaArrowRight style={{ marginLeft: ".5rem" }} />
+              </Link>
             </div>
-            <Link to="/about" className="btn btn-primary btn-lg text-white">
-              Read more <FaArrowRight style={{ marginLeft: ".5rem" }} />
-            </Link>
           </div>
         </div>
       </section>
