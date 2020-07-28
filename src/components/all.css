@@ -175,7 +175,6 @@ body {
 .about-page-section {
   min-height: 100vh;
   padding-top: 5rem;
-  background-color: #f5f5f9;
 }
 
 .about-titles {
@@ -521,6 +520,45 @@ body {
   height: auto;
 }
 
+/* ============================ SERVICES PAGE ============================= */
+
+.services-content img {
+  max-width: 450px;
+  height: auto;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.service-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #f5f5f9;
+  padding: 1rem 2rem;
+  max-width: 1170px;
+}
+
+.service-box h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.service-box p {
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.service-box-text {
+  padding: 2rem;
+  text-align: center;
+}
+
+.services-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ============================= MEDIA QUERIES ============================ */
 
 @media screen and (min-width: 1920px) {
@@ -561,6 +599,15 @@ body {
   }
   .belief-card-contaier {
     flex-direction: column;
+  }
+  .service-box {
+    flex-direction: column;
+  }
+  .services-content img {
+    order: 1;
+  }
+  .service-box-text {
+    order: 2;
   }
 }
 
@@ -640,6 +687,9 @@ body {
   .card-title-b {
     font-size: 1.5rem;
   }
+  .services-content img {
+    max-width: 300px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -669,5 +719,18 @@ body {
   }
   .card {
     width: 280px;
+  }
+  .service-box {
+    padding: 1rem 1rem;
+  }
+  .services-content img {
+    max-width: 270px;
+  }
+  .service-box-text {
+    padding: 0.5rem;
+  }
+  .service-box p {
+    letter-spacing: 0.5px;
+    line-height: 1.5;
   }
 }
