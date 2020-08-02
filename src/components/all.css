@@ -378,6 +378,10 @@ body {
   background-color: #f0f5f8;
 }
 
+.contact-form-column {
+  margin: 2rem;
+}
+
 .contact-thanks {
   display: flex;
   justify-content: center;
@@ -389,6 +393,32 @@ body {
 
 .contact-page-subheading {
   font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.contact-info {
+  text-align: center;
+  margin: 1rem;
+}
+
+.contact-info-icon {
+  color: rgb(32, 32, 225);
+  font-size: 1.75rem;
+  margin-bottom: 5px;
 }
 
 /* =============================  FOOTER ============================ */
@@ -689,6 +719,9 @@ body {
   }
   .services-content img {
     max-width: 300px;
+  }
+  .contact-info-wrapper {
+    flex-direction: column;
   }
 }
 
